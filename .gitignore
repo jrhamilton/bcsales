@@ -6,3 +6,5 @@ prefect/sales
 **/__pycache__
 logs
 **/logs
+!dbt/logs
+!dbt/bc_sales/logs
