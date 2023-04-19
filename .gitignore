@@ -1,0 +1,8 @@
+prefect/.prefectignore
+prefect/gac.json
+prefect/sales
+**/*.csv
+**/*.csv.gz
+**/__pycache__
+logs
+**/logs

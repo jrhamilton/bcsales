@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: datatalksclub-375802
+    schema: bandcamp_sales_schema
+
+    tables:
+      - name: bc_sales
