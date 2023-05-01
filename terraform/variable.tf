@@ -3,13 +3,11 @@ locals {
 }
 
 variable "project" {
-  description = "datatalksclub-375802"
-  default = "datatalksclub-375802"
+  description = "Input your PROJECT_ID name"
 }
 
 variable "region" {
   description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "us-central1"
   type = string
 }
 
