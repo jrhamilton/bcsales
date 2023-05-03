@@ -5,9 +5,9 @@ import pandas as pd
 from prefect_gcp.bigquery import BigQueryWarehouse
 
 
-GPS_PROJECT = os.environ["GPS_PROJECT"]
+GCP_PROJECT = os.environ["GCP_PROJECT"]
 DTC_PROJECT_BASE = "bandcamp_sales"
-BUCKET = f"{DTC_PROJECT_BASE}_{GPS_PROJECT}"
+BUCKET = f"{DTC_PROJECT_BASE}_{GCP_PROJECT}"
 PROJECT_SCHEMA = f"{DTC_PROJECT_BASE}_schema"
 BQ_BLOCK = "bq-warehouse"
 
@@ -19,7 +19,7 @@ def initialize_ext_table():
         print("Initializing External bc_sales_ext table.")
 
         create_bc_sales_ext = f"""
-            CREATE OR REPLACE EXTERNAL TABLE `{GPS_PROJECT}.{PROJECT_SCHEMA}.bc_sales_ext`
+            CREATE OR REPLACE EXTERNAL TABLE `{GCP_PROJECT}.{PROJECT_SCHEMA}.bc_sales_ext`
                 OPTIONS (
                     format = 'PARQUET',
                     uris = ['gs://{BUCKET}/data/sales/sales*.parquet']
@@ -35,7 +35,7 @@ def initialize_ref_table():
         print("Creating Country Code Reference Table.")
 
         create_cc_ref_ext = f"""
-            CREATE OR REPLACE EXTERNAL TABLE `{GPS_PROJECT}.{PROJECT_SCHEMA}.country_code_ref`
+            CREATE OR REPLACE EXTERNAL TABLE `{GCP_PROJECT}.{PROJECT_SCHEMA}.country_code_ref`
                 OPTIONS (
                     format = 'PARQUET',
                     uris = ['gs://{BUCKET}/data/refs/refs.parquet']
@@ -52,7 +52,7 @@ def get_cc_ref_range_max():
     """
     with BigQueryWarehouse.load(BQ_BLOCK) as warehouse:
         get_range_max = f"""
-            SELECT MAX(`cc_ref`) FROM `{GPS_PROJECT}.{PROJECT_SCHEMA}.country_code_ref`
+            SELECT MAX(`cc_ref`) FROM `{GCP_PROJECT}.{PROJECT_SCHEMA}.country_code_ref`
         """
 
         range_max = warehouse.fetch_one(get_range_max)[0]
@@ -64,15 +64,15 @@ def get_cc_ref_range_max():
 def create_partitioned_table(rb_max):
     with BigQueryWarehouse.load(BQ_BLOCK) as warehouse:
         """
-        CREATE CURRENCY PARTITIONED TABLE
+        CREATE sales PARTITIONED TABLE
         Using RANGE_BUCKET on cc_ref code.
         """
-        print("Creating Partition bucket with RANGE_BUCKET on country_code reference.")
+        print("Creating Partitioned sales table with RANGE_BUCKET on country_code reference.")
 
         create_bcS_currency_part_ext = f"""
-            CREATE OR REPLACE TABLE `{GPS_PROJECT}.{PROJECT_SCHEMA}.bcS_cc_ref_part_ext`
+            CREATE OR REPLACE TABLE `{GCP_PROJECT}.{PROJECT_SCHEMA}.sales_partitioned`
             PARTITION BY RANGE_BUCKET(cc_ref, GENERATE_ARRAY(0, {rb_max}, 1))  AS (
-                SELECT * FROM `{GPS_PROJECT}.{PROJECT_SCHEMA}.bc_sales_ext`
+                SELECT * FROM `{GCP_PROJECT}.{PROJECT_SCHEMA}.bc_sales_ext`
             );
         """
         warehouse.execute(create_bcS_currency_part_ext)
@@ -87,10 +87,10 @@ def create_cluster_by_artist_name(rb_max):
         print("Creating cluster by artist_name on top of Partition.")
 
         create_bcS_currency_part_ext = f"""
-            CREATE OR REPLACE TABLE `{GPS_PROJECT}.{PROJECT_SCHEMA}.bcS_artist_name_clustered`
+            CREATE OR REPLACE TABLE `{GCP_PROJECT}.{PROJECT_SCHEMA}.sales_clustered`
             PARTITION BY RANGE_BUCKET(cc_ref, GENERATE_ARRAY(0, {rb_max}, 1))
             CLUSTER BY artist_name AS (
-                SELECT * FROM `{GPS_PROJECT}.{PROJECT_SCHEMA}.bcS_cc_ref_part_ext`
+                SELECT * FROM `{GCP_PROJECT}.{PROJECT_SCHEMA}.sales_partitioned`
             );
         """
         warehouse.execute(create_bcS_currency_part_ext)

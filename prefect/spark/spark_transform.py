@@ -12,9 +12,9 @@ import pandas as pd
 
 
 HOME = os.environ['HOME']
-GPS_PROJECT = os.environ['GPS_PROJECT']
+GCP_PROJECT = os.environ['GCP_PROJECT']
 DTC_PROJECT_BASE = "bandcamp_sales"
-GCS_BUCKET = f"{DTC_PROJECT_BASE}_{GPS_PROJECT}"
+GCS_BUCKET = f"{DTC_PROJECT_BASE}_{GCP_PROJECT}"
 SPARK_CONNECTOR_JAR = f"{HOME}/spark/gcs-connector-hadoop3-latest.jar"
 CREDENTIALS_LOCATION = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
 DATA_PATH = f"{HOME}/bcsales/prefect/spark/data"
