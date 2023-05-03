@@ -5,17 +5,17 @@ from prefect_gcp.cloud_storage import GcsBucket
 from prefect_gcp.credentials import GcpCredentials
 from prefect_gcp.bigquery import BigQueryWarehouse
 from prefect.infrastructure import DockerContainer
+import sys, subprocess
 
 gcs_bucket=os.environ["GCS_BUCKET"]
 
-# gac = GOOGLE_APPLICATION_CREDENTIALS
 gac_file = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
 gac = open(gac_file, "rb")
 
 # sai = service account info
 sai = json.load(gac)
 
-os.system('prefect block register -m prefect_gcp')
+subprocess.run('prefect block register -m prefect_gcp', shell=True, check=True)
 
 credentials = GcpCredentials(
     service_account_info=sai

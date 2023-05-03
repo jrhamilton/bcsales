@@ -17,7 +17,7 @@ DTC_PROJECT_BASE = "bandcamp_sales"
 GCS_BUCKET = f"{DTC_PROJECT_BASE}_{GPS_PROJECT}"
 SPARK_CONNECTOR_JAR = f"{HOME}/spark/gcs-connector-hadoop3-latest.jar"
 CREDENTIALS_LOCATION = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
-DATA_PATH = f"{HOME}/bc2/prefect/spark/data"
+DATA_PATH = f"{HOME}/bcsales/prefect/spark/data"
 
 
 conf = SparkConf() \
@@ -44,7 +44,7 @@ SPARK = SparkSession.builder \
 #@task(log_prints=True, retries=3)
 def read_bucket_parquet():
     print(f"Reading fromm {GCS_BUCKET}")
-    bcS_df = SPARK.read.parquet(f'gs://{GCS_BUCKET}/data/sales/*')
+    bcS_df = SPARK.read.parquet(f'gs://{GCS_BUCKET}/data/lake/*')
 
     print("Parquet read from GCS.")
     print("BandCamp Sales DataFrame created.")

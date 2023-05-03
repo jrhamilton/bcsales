@@ -63,7 +63,7 @@ def get_compression_type(meta: int, f: str):
         meta = 8
 
     print(f"META is: {meta}")
-    print(f"COMPORESSION is: {compression[0]}")
+    print(f"COMPRESSION is: {compression[0]}")
     return meta, compression
 
 
@@ -141,7 +141,7 @@ def write_dataframe_to_local(df: pd.DataFrame,
     df.to_parquet(output_path)
 
     line_count = len(df)
-    print(f"DataFrame Rows: {line_count}")
+    print(f"DataFrame Rows for {output_file}: {line_count}")
 
     return output_path, line_count
 
@@ -169,7 +169,7 @@ def url_blob(url):
 def directory_blob(directory):
     """ Directory Blob """
     print("Start Directory loop.")
-    print(f"DIRECTOY: {directory}")
+    print(f"DIRECTORY: {directory}")
     print("--------------------")
 
     for idx, path in enumerate(glob.glob(f"{directory}*")):

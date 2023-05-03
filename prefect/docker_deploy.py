@@ -1,7 +1,7 @@
 from prefect.deployments import Deployment
 from prefect.infrastructure.docker import DockerContainer
 from flows.ingest_data_flow import ingest_flow
-from flows.gcp_to_bq import etl_gcp_to_bq
+from flows.gcp_to_bq import etl_gcs_to_bq
 
 docker_block = DockerContainer.load("bcsales-ingest-container")
 
@@ -17,6 +17,6 @@ docker_dep2 = Deployment.build_from_flow(
     infrastructure=docker_block
 )
 
-if __name__ == "__main__":
+if __main__ == "__main__":
     docker_dep1.apply()
     docker_dep2.apply()
