@@ -8,6 +8,7 @@ logs
 !dbt/logs
 !dbt/bc_sales/logs
 dbt/bc_sales/target
+dbt/bc_sales/dbt_packages
 **/data
 **/data/*
 prefect/spark/.prefectignore
