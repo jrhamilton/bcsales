@@ -11,7 +11,7 @@ terraform {
 provider "google" {
   project = var.project
   region = var.region
-  # credentials = file(var.credentials)
+  credentials = file(var.credentials)
 }
 
 # Data Lake Bucket
