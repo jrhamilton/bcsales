@@ -2,8 +2,52 @@ version: 2
 
 sources:
   - name: staging
-    database: datatalksclub-375802
+    database: "{{ env_var('GCP_PROJECT') }}"
     schema: bandcamp_sales_schema
 
     tables:
-      - name: bc_sales
+      - name: sales_partitioned
+        description: >
+          Copy of sales from gcs-to-bq. Partitioned on cc_ref (country code integer id) used by BigQuery RANGE_BUCKET for partitioning.
+        columns:
+          - name: intId
+          - name: _id
+          - name: datetime
+          - name: country
+          - name: ST
+          - name: IT
+          - name: item_price
+          - name: amount_paid_usd
+          - name: currency
+          - name: AOF
+          - name: art_id
+          - name: releases
+          - name: artist_name
+          - name: album_title
+          - name: cc_ref
+      - name: sales_clustered
+        description: >
+          Same as sales_partitioned but also clustered by artist_name
+        columns:
+          - name: intId
+          - name: _id
+          - name: datetime
+          - name: country
+          - name: ST
+          - name: IT
+          - name: item_price
+          - name: amount_paid_usd
+          - name: currency
+          - name: AOF
+          - name: art_id
+          - name: releases
+          - name: artist_name
+          - name: album_title
+          - name: cc_ref
+      - name: country_code_ref
+        description: >
+          A Reference to the RANGE_BUCKET id (cc_ref) as a lookup for country_code.
+        columns:
+          - name: count
+          - name: contry_code
+          - name: cc_ref

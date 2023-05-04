@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: country_facts
+    description: >
+      List of countries with shown total transactions, total sales and average sale per transaction.
+  - name: country_facts_view
+    description: >
+      Same as country_facts but adds 2 letter country code for each country.
+  - name: artist_facts
+    description: >
+      Lists sum and average sales in each country per artist with at least 1 sale in the country.
+  - name: artist_max_sales_facts
+    description: >
+      Lists artist with most sales per country along with the sum of sales per the artist.
+  - name: artist_max_avg_facts
+    description: >
+      Lists artist with highest average sales per country along with average of sales per the artist.
+  - name: complete_artist_by_country
+    description: >
+      Lists each country and shows both the artist with highest sales and the artist with highest average sales.
