@@ -140,7 +140,7 @@ def create_country_code_refs_dataframe(bcS_df):
     groupBy_cc = bcS_df \
             .groupBy('country_code') \
             .count() \
-            .select(F.col('count'), 'country_code') \
+            .select(F.col('count'), 'country_code', 'country') \
             .orderBy(F.col('count').desc())
 
     """
@@ -151,7 +151,7 @@ def create_country_code_refs_dataframe(bcS_df):
     like the following was found on Stackoverflow
     """
     ccRef_df = groupBy_cc.rdd.zipWithIndex() \
-            .map(lambda x: (x[0][0],x[0][1],x[1])) \
+            .map(lambda x: (x[0][0],x[0][1],x[0][2],x[1])) \
             .toDF(groupBy_cc.columns+["cc_ref"])
 
     print("Country Code Reference DataFrame created.")
@@ -167,7 +167,7 @@ def output_to_csv(bcS_df, ccRef_df):
     bcS_result = bcS_df \
             .join(ccRef_df, bcS_df.country_code == ccRef_df.country_code) \
             .select(bcS_df.intId, bcS_df._id, bcS_df.datetime, bcS_df.country_code,
-                    bcS_df.country, bcS_df.ST, bcS_df.IT, bcS_df.item_price,
+                    bcS_df.ST, bcS_df.IT, bcS_df.item_price,
                     bcS_df.amount_paid_usd, bcS_df.currency, bcS_df.AOF,
                     bcS_df.art_id, bcS_df.releases, bcS_df.artist_name, bcS_df.album_title,
                     ccRef_df.cc_ref)
