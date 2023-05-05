@@ -9755,3 +9755,1248 @@ Job ID: 83566530-dd9d-40c0-bbb0-aecd3227e01d
 [0m11:08:59.880275 [debug] [MainThread]: Command `dbt build` failed at 11:08:59.880114 after 6.78 seconds
 [0m11:08:59.880782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa758952530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa745b80d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa745be1270>]}
 [0m11:08:59.881268 [debug] [MainThread]: Flushing usage events
+[0m12:08:37.920530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f99e62590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f98deb820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f98deb850>]}
+
+
+============================== 12:08:37.924337 | fd9735ab-0ed1-4a00-a57f-3901f4fcb510 ==============================
+[0m12:08:37.924337 [info ] [MainThread]: Running with dbt=1.5.0
+[0m12:08:37.925396 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/j/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/j/bcsales/dbt/bc_sales/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:08:38.936568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f98deb8e0>]}
+[0m12:08:38.949354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f86bd3820>]}
+[0m12:08:38.972139 [debug] [MainThread]: checksum: 2b6fdde617d5a0a990757f78fa0717194984bf092aff54287207b08feaec457a, vars: {}, profile: , target: prod, version: 1.5.0
+[0m12:08:39.016531 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m12:08:39.017595 [debug] [MainThread]: Partial parsing: added file: bc_sales://models/core/artist_facts_view.sql
+[0m12:08:39.018342 [debug] [MainThread]: Partial parsing: updated file: bc_sales://models/core/schema.yml
+[0m12:08:39.019498 [debug] [MainThread]: Partial parsing: updated file: bc_sales://models/staging/schema.yml
+[0m12:08:39.043197 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_facts_view.sql
+[0m12:08:39.061497 [debug] [MainThread]: 1699: static parser successfully parsed core/country_facts.sql
+[0m12:08:39.066173 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales_by_country.sql
+[0m12:08:39.070753 [debug] [MainThread]: 1699: static parser successfully parsed core/complete_artist_by_country.sql
+[0m12:08:39.075725 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_max_avg_facts.sql
+[0m12:08:39.080124 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_max_sales_facts.sql
+[0m12:08:39.084628 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_facts.sql
+[0m12:08:39.088953 [debug] [MainThread]: 1603: static parser failed on staging/stg_higher_activity_countries.sql
+[0m12:08:39.111668 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_higher_activity_countries.sql
+[0m12:08:39.114280 [debug] [MainThread]: 1699: static parser successfully parsed core/country_facts_view.sql
+[0m12:08:39.119053 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_country_code_ref.sql
+[0m12:08:39.178718 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.bc_sales.example
+[0m12:08:39.187881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f863340d0>]}
+[0m12:08:39.201625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f867ea9e0>]}
+[0m12:08:39.202438 [info ] [MainThread]: Found 10 models, 0 tests, 0 snapshots, 0 analyses, 465 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:08:39.205318 [info ] [MainThread]: 
+[0m12:08:39.206643 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:08:39.208831 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_datatalksclub-375802'
+[0m12:08:39.209398 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:39.565504 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_datatalksclub-375802, now list_datatalksclub-375802_bc_production)
+[0m12:08:39.566378 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:08:39.906332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f867e8820>]}
+[0m12:08:39.907816 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m12:08:39.908611 [info ] [MainThread]: 
+[0m12:08:39.915537 [debug] [Thread-1 (]: Began running node model.bc_sales.stg_country_code_ref
+[0m12:08:39.919026 [info ] [Thread-1 (]: 1 of 10 START sql view model bc_production.stg_country_code_ref ................ [RUN]
+[0m12:08:39.917711 [debug] [Thread-3 (]: Began running node model.bc_sales.stg_sales_by_country
+[0m12:08:39.922212 [info ] [Thread-3 (]: 3 of 10 START sql view model bc_production.stg_sales_by_country ................ [RUN]
+[0m12:08:39.924055 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.bc_sales.stg_sales_by_country'
+[0m12:08:39.924847 [debug] [Thread-3 (]: Began compiling node model.bc_sales.stg_sales_by_country
+[0m12:08:39.916738 [debug] [Thread-2 (]: Began running node model.bc_sales.stg_higher_activity_countries
+[0m12:08:39.933575 [info ] [Thread-2 (]: 2 of 10 START sql view model bc_production.stg_higher_activity_countries ....... [RUN]
+[0m12:08:39.935595 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.bc_sales.stg_higher_activity_countries'
+[0m12:08:39.936435 [debug] [Thread-2 (]: Began compiling node model.bc_sales.stg_higher_activity_countries
+[0m12:08:39.921126 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_datatalksclub-375802_bc_production, now model.bc_sales.stg_country_code_ref)
+[0m12:08:39.941197 [debug] [Thread-1 (]: Began compiling node model.bc_sales.stg_country_code_ref
+[0m12:08:39.932494 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.stg_sales_by_country"
+[0m12:08:39.956909 [debug] [Thread-3 (]: Timing info for model.bc_sales.stg_sales_by_country (compile): 12:08:39.925325 => 12:08:39.956504
+[0m12:08:39.955532 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:08:39.945472 [debug] [Thread-1 (]: Writing injected SQL for node "model.bc_sales.stg_country_code_ref"
+[0m12:08:39.960716 [debug] [Thread-1 (]: Timing info for model.bc_sales.stg_country_code_ref (compile): 12:08:39.941584 => 12:08:39.960220
+[0m12:08:39.961495 [debug] [Thread-1 (]: Began executing node model.bc_sales.stg_country_code_ref
+[0m12:08:39.957562 [debug] [Thread-3 (]: Began executing node model.bc_sales.stg_sales_by_country
+[0m12:08:40.054783 [debug] [Thread-1 (]: Writing runtime sql for node "model.bc_sales.stg_country_code_ref"
+[0m12:08:40.057568 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:08:40.055742 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.stg_sales_by_country"
+[0m12:08:40.056645 [debug] [Thread-2 (]: On model.bc_sales.stg_higher_activity_countries: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+    select cc_ref
+    from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`
+    where count > 20
+    order by
+	cc_ref desc
+    limit 1
+
+[0m12:08:40.058874 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m12:08:40.151138 [debug] [Thread-1 (]: On model.bc_sales.stg_country_code_ref: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_country_code_ref"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+  OPTIONS()
+  as 
+
+select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`;
+
+
+[0m12:08:40.204232 [debug] [Thread-3 (]: On model.bc_sales.stg_sales_by_country: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_sales_by_country"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_sales_by_country`
+  OPTIONS()
+  as 
+
+-- Q1
+
+select
+  cast(cc_ref as integer) as cc_ref,
+  cast(amount_paid_usd as numeric) as amount_paid_usd,
+
+  cast(country_code as string) as country_code,
+  cast(country as string) as country
+
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_partitioned`;
+
+
+[0m12:08:40.837720 [debug] [Thread-3 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_sales_by_country"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_sales_by_country`
+  OPTIONS()
+  as 
+
+-- Q1
+
+select
+  cast(cc_ref as integer) as cc_ref,
+  cast(amount_paid_usd as numeric) as amount_paid_usd,
+
+  cast(country_code as string) as country_code,
+  cast(country as string) as country
+
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_partitioned`;
+
+
+[0m12:08:40.838472 [debug] [Thread-3 (]: BigQuery adapter: 404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+
+Location: us-central1
+Job ID: 09750a55-90ac-4f1b-b45c-c51ed889ec53
+
+[0m12:08:40.839283 [debug] [Thread-3 (]: Timing info for model.bc_sales.stg_sales_by_country (execute): 12:08:39.973112 => 12:08:40.838982
+[0m12:08:40.844839 [debug] [Thread-3 (]: Runtime Error in model stg_sales_by_country (models/staging/stg_sales_by_country.sql)
+  404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+  
+  Location: us-central1
+  Job ID: 09750a55-90ac-4f1b-b45c-c51ed889ec53
+  
+[0m12:08:40.845705 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f863995a0>]}
+[0m12:08:40.846621 [error] [Thread-3 (]: 3 of 10 ERROR creating sql view model bc_production.stg_sales_by_country ....... [[31mERROR[0m in 0.92s]
+[0m12:08:40.847647 [debug] [Thread-3 (]: Finished running node model.bc_sales.stg_sales_by_country
+[0m12:08:40.848746 [debug] [Thread-4 (]: Began running node model.bc_sales.country_facts
+[0m12:08:40.849558 [info ] [Thread-4 (]: 4 of 10 SKIP relation bc_production.country_facts .............................. [[33mSKIP[0m]
+[0m12:08:40.850594 [debug] [Thread-4 (]: Finished running node model.bc_sales.country_facts
+[0m12:08:40.905426 [debug] [Thread-1 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_country_code_ref"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+  OPTIONS()
+  as 
+
+select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`;
+
+
+[0m12:08:40.906167 [debug] [Thread-1 (]: BigQuery adapter: 404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+
+Location: us-central1
+Job ID: 00a47891-6c46-47f9-9c6e-74f6c10fc52e
+
+[0m12:08:40.906964 [debug] [Thread-1 (]: Timing info for model.bc_sales.stg_country_code_ref (execute): 12:08:39.961963 => 12:08:40.906649
+[0m12:08:40.908820 [debug] [Thread-1 (]: Runtime Error in model stg_country_code_ref (models/staging/stg_country_code_ref.sql)
+  404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+  
+  Location: us-central1
+  Job ID: 00a47891-6c46-47f9-9c6e-74f6c10fc52e
+  
+[0m12:08:40.909424 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f869bd540>]}
+[0m12:08:40.910314 [error] [Thread-1 (]: 1 of 10 ERROR creating sql view model bc_production.stg_country_code_ref ....... [[31mERROR[0m in 0.99s]
+[0m12:08:40.911789 [debug] [Thread-1 (]: Finished running node model.bc_sales.stg_country_code_ref
+[0m12:08:40.912864 [debug] [Thread-3 (]: Began running node model.bc_sales.country_facts_view
+[0m12:08:40.913476 [info ] [Thread-3 (]: 5 of 10 SKIP relation bc_production.country_facts_view ......................... [[33mSKIP[0m]
+[0m12:08:40.914532 [debug] [Thread-3 (]: Finished running node model.bc_sales.country_facts_view
+[0m12:08:41.564092 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:60abc800-aee7-4b22-9bc1-bbcf536ae36b&page=queryresults
+[0m12:08:41.565274 [debug] [Thread-2 (]: Writing injected SQL for node "model.bc_sales.stg_higher_activity_countries"
+[0m12:08:41.566253 [debug] [Thread-2 (]: Timing info for model.bc_sales.stg_higher_activity_countries (compile): 12:08:39.936983 => 12:08:41.565920
+[0m12:08:41.566825 [debug] [Thread-2 (]: Began executing node model.bc_sales.stg_higher_activity_countries
+[0m12:08:41.572996 [debug] [Thread-2 (]: Writing runtime sql for node "model.bc_sales.stg_higher_activity_countries"
+[0m12:08:41.573920 [debug] [Thread-2 (]: On model.bc_sales.stg_higher_activity_countries: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_higher_activity_countries`
+  OPTIONS()
+  as 
+
+-- Q2, Q3
+
+select
+    cast(cc_ref as integer) as cc_ref,
+    cast(artist_name as string) as artist_name,
+    cast(amount_paid_usd as numeric) as amount_paid_usd,
+    cast(country_code as string) as country_code, --REMOVE THIS TOO??
+    cast(country as string) as country -- TODO: REMOVE THIS LINE
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_clustered`
+where cc_ref <= 115
+order by
+    cc_ref asc,
+    artist_name asc;
+
+
+[0m12:08:41.688901 [debug] [Thread-2 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_higher_activity_countries`
+  OPTIONS()
+  as 
+
+-- Q2, Q3
+
+select
+    cast(cc_ref as integer) as cc_ref,
+    cast(artist_name as string) as artist_name,
+    cast(amount_paid_usd as numeric) as amount_paid_usd,
+    cast(country_code as string) as country_code, --REMOVE THIS TOO??
+    cast(country as string) as country -- TODO: REMOVE THIS LINE
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_clustered`
+where cc_ref <= 115
+order by
+    cc_ref asc,
+    artist_name asc;
+
+
+[0m12:08:41.689727 [debug] [Thread-2 (]: BigQuery adapter: 404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+
+Location: us-central1
+Job ID: 4725626f-4fe5-43db-99d3-855f4f8e7507
+
+[0m12:08:41.690522 [debug] [Thread-2 (]: Timing info for model.bc_sales.stg_higher_activity_countries (execute): 12:08:41.567143 => 12:08:41.690206
+[0m12:08:41.692568 [debug] [Thread-2 (]: Runtime Error in model stg_higher_activity_countries (models/staging/stg_higher_activity_countries.sql)
+  404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+  
+  Location: us-central1
+  Job ID: 4725626f-4fe5-43db-99d3-855f4f8e7507
+  
+[0m12:08:41.693230 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fd9735ab-0ed1-4a00-a57f-3901f4fcb510', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f869ddd50>]}
+[0m12:08:41.694313 [error] [Thread-2 (]: 2 of 10 ERROR creating sql view model bc_production.stg_higher_activity_countries  [[31mERROR[0m in 1.76s]
+[0m12:08:41.695633 [debug] [Thread-2 (]: Finished running node model.bc_sales.stg_higher_activity_countries
+[0m12:08:41.697165 [debug] [Thread-1 (]: Began running node model.bc_sales.artist_facts
+[0m12:08:41.697826 [info ] [Thread-1 (]: 6 of 10 SKIP relation bc_production.artist_facts ............................... [[33mSKIP[0m]
+[0m12:08:41.698894 [debug] [Thread-1 (]: Finished running node model.bc_sales.artist_facts
+[0m12:08:41.700051 [debug] [Thread-3 (]: Began running node model.bc_sales.artist_facts_view
+[0m12:08:41.701789 [info ] [Thread-3 (]: 7 of 10 SKIP relation bc_production.artist_facts_view .......................... [[33mSKIP[0m]
+[0m12:08:41.701178 [debug] [Thread-4 (]: Began running node model.bc_sales.artist_max_sales_facts
+[0m12:08:41.700603 [debug] [Thread-2 (]: Began running node model.bc_sales.artist_max_avg_facts
+[0m12:08:41.702890 [debug] [Thread-3 (]: Finished running node model.bc_sales.artist_facts_view
+[0m12:08:41.703491 [info ] [Thread-4 (]: 9 of 10 SKIP relation bc_production.artist_max_sales_facts ..................... [[33mSKIP[0m]
+[0m12:08:41.704491 [info ] [Thread-2 (]: 8 of 10 SKIP relation bc_production.artist_max_avg_facts ....................... [[33mSKIP[0m]
+[0m12:08:41.705627 [debug] [Thread-4 (]: Finished running node model.bc_sales.artist_max_sales_facts
+[0m12:08:41.706249 [debug] [Thread-2 (]: Finished running node model.bc_sales.artist_max_avg_facts
+[0m12:08:41.707647 [debug] [Thread-1 (]: Began running node model.bc_sales.complete_artist_by_country
+[0m12:08:41.708293 [info ] [Thread-1 (]: 10 of 10 SKIP relation bc_production.complete_artist_by_country ................ [[33mSKIP[0m]
+[0m12:08:41.709099 [debug] [Thread-1 (]: Finished running node model.bc_sales.complete_artist_by_country
+[0m12:08:41.711392 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:08:41.711860 [debug] [MainThread]: Connection 'model.bc_sales.stg_country_code_ref' was properly closed.
+[0m12:08:41.712263 [debug] [MainThread]: Connection 'model.bc_sales.stg_sales_by_country' was properly closed.
+[0m12:08:41.712579 [debug] [MainThread]: Connection 'model.bc_sales.stg_higher_activity_countries' was properly closed.
+[0m12:08:41.713032 [info ] [MainThread]: 
+[0m12:08:41.713875 [info ] [MainThread]: Finished running 3 view models, 7 table models in 0 hours 0 minutes and 2.51 seconds (2.51s).
+[0m12:08:41.715335 [debug] [MainThread]: Command end result
+[0m12:08:41.735473 [info ] [MainThread]: 
+[0m12:08:41.736496 [info ] [MainThread]: [31mCompleted with 3 errors and 0 warnings:[0m
+[0m12:08:41.737231 [info ] [MainThread]: 
+[0m12:08:41.737873 [error] [MainThread]: [33mRuntime Error in model stg_sales_by_country (models/staging/stg_sales_by_country.sql)[0m
+[0m12:08:41.738596 [error] [MainThread]:   404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+[0m12:08:41.739196 [error] [MainThread]:   
+[0m12:08:41.739862 [error] [MainThread]:   Location: us-central1
+[0m12:08:41.740449 [error] [MainThread]:   Job ID: 09750a55-90ac-4f1b-b45c-c51ed889ec53
+[0m12:08:41.741028 [error] [MainThread]:   
+[0m12:08:41.741620 [info ] [MainThread]: 
+[0m12:08:41.742210 [error] [MainThread]: [33mRuntime Error in model stg_country_code_ref (models/staging/stg_country_code_ref.sql)[0m
+[0m12:08:41.742780 [error] [MainThread]:   404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+[0m12:08:41.743343 [error] [MainThread]:   
+[0m12:08:41.743937 [error] [MainThread]:   Location: us-central1
+[0m12:08:41.744497 [error] [MainThread]:   Job ID: 00a47891-6c46-47f9-9c6e-74f6c10fc52e
+[0m12:08:41.745064 [error] [MainThread]:   
+[0m12:08:41.745646 [info ] [MainThread]: 
+[0m12:08:41.746241 [error] [MainThread]: [33mRuntime Error in model stg_higher_activity_countries (models/staging/stg_higher_activity_countries.sql)[0m
+[0m12:08:41.746825 [error] [MainThread]:   404 Not found: Dataset datatalksclub-375802:bc_production was not found in location us-central1
+[0m12:08:41.747397 [error] [MainThread]:   
+[0m12:08:41.747991 [error] [MainThread]:   Location: us-central1
+[0m12:08:41.748539 [error] [MainThread]:   Job ID: 4725626f-4fe5-43db-99d3-855f4f8e7507
+[0m12:08:41.749136 [error] [MainThread]:   
+[0m12:08:41.749788 [info ] [MainThread]: 
+[0m12:08:41.750648 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=7 TOTAL=10
+[0m12:08:41.751833 [debug] [MainThread]: Command `dbt build` failed at 12:08:41.751617 after 3.84 seconds
+[0m12:08:41.752382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f99e62590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f99de32b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f8693c370>]}
+[0m12:08:41.752901 [debug] [MainThread]: Flushing usage events
+[0m17:33:53.093204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7fc4a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7ebcf790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7ebcf7c0>]}
+
+
+============================== 17:33:53.097045 | 1babb787-0f8c-4cfd-9de2-f93e8727f85c ==============================
+[0m17:33:53.097045 [info ] [MainThread]: Running with dbt=1.5.0
+[0m17:33:53.098271 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/j/bcsales/dbt/bc_sales/logs', 'version_check': 'True', 'profiles_dir': '/home/j/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m17:33:54.261307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7ebcf850>]}
+[0m17:33:54.275093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6cad07f0>]}
+[0m17:33:54.298930 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
+[0m17:33:54.319177 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:33:54.320588 [debug] [MainThread]: previous checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, current checksum: 2b6fdde617d5a0a990757f78fa0717194984bf092aff54287207b08feaec457a
+[0m17:33:54.321145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6cadeaa0>]}
+[0m17:33:55.502700 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_country_code_ref.sql
+[0m17:33:55.521043 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales_by_country.sql
+[0m17:33:55.525974 [debug] [MainThread]: 1603: static parser failed on staging/stg_higher_activity_countries.sql
+[0m17:33:55.548004 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_higher_activity_countries.sql
+[0m17:33:55.550571 [debug] [MainThread]: 1699: static parser successfully parsed core/complete_artist_by_country.sql
+[0m17:33:55.555216 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_facts_view.sql
+[0m17:33:55.560339 [debug] [MainThread]: 1699: static parser successfully parsed core/country_facts_view.sql
+[0m17:33:55.564662 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_facts.sql
+[0m17:33:55.569620 [debug] [MainThread]: 1699: static parser successfully parsed core/country_facts.sql
+[0m17:33:55.574201 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_max_sales_facts.sql
+[0m17:33:55.579112 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_max_avg_facts.sql
+[0m17:33:55.793152 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.bc_sales.example
+[0m17:33:55.801465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7ebcf7c0>]}
+[0m17:33:55.820266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6cadde70>]}
+[0m17:33:55.821174 [info ] [MainThread]: Found 10 models, 0 tests, 0 snapshots, 0 analyses, 465 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics, 0 groups
+[0m17:33:55.823856 [info ] [MainThread]: 
+[0m17:33:55.825212 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:33:55.827533 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_datatalksclub-375802'
+[0m17:33:55.828302 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:33:56.193007 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_datatalksclub-375802, now list_datatalksclub-375802_bandcamp_sales_schema)
+[0m17:33:56.193999 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:33:56.549686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6cade8c0>]}
+[0m17:33:56.550864 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:33:56.551970 [info ] [MainThread]: 
+[0m17:33:56.557971 [debug] [Thread-1 (]: Began running node model.bc_sales.stg_country_code_ref
+[0m17:33:56.559508 [debug] [Thread-2 (]: Began running node model.bc_sales.stg_higher_activity_countries
+[0m17:33:56.558869 [info ] [Thread-1 (]: 1 of 10 START sql view model bandcamp_sales_schema.stg_country_code_ref ........ [RUN]
+[0m17:33:56.560647 [debug] [Thread-3 (]: Began running node model.bc_sales.stg_sales_by_country
+[0m17:33:56.561351 [info ] [Thread-2 (]: 2 of 10 START sql view model bandcamp_sales_schema.stg_higher_activity_countries  [RUN]
+[0m17:33:56.562610 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_datatalksclub-375802_bandcamp_sales_schema, now model.bc_sales.stg_country_code_ref)
+[0m17:33:56.564878 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.bc_sales.stg_higher_activity_countries'
+[0m17:33:56.563364 [info ] [Thread-3 (]: 3 of 10 START sql view model bandcamp_sales_schema.stg_sales_by_country ........ [RUN]
+[0m17:33:56.567384 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.bc_sales.stg_sales_by_country'
+[0m17:33:56.566150 [debug] [Thread-2 (]: Began compiling node model.bc_sales.stg_higher_activity_countries
+[0m17:33:56.565604 [debug] [Thread-1 (]: Began compiling node model.bc_sales.stg_country_code_ref
+[0m17:33:56.567918 [debug] [Thread-3 (]: Began compiling node model.bc_sales.stg_sales_by_country
+[0m17:33:56.585277 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.stg_sales_by_country"
+[0m17:33:56.580357 [debug] [Thread-1 (]: Writing injected SQL for node "model.bc_sales.stg_country_code_ref"
+[0m17:33:56.575562 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:33:56.586718 [debug] [Thread-1 (]: Timing info for model.bc_sales.stg_country_code_ref (compile): 17:33:56.576151 => 17:33:56.586325
+[0m17:33:56.587487 [debug] [Thread-3 (]: Timing info for model.bc_sales.stg_sales_by_country (compile): 17:33:56.580933 => 17:33:56.587092
+[0m17:33:56.589445 [debug] [Thread-3 (]: Began executing node model.bc_sales.stg_sales_by_country
+[0m17:33:56.588638 [debug] [Thread-1 (]: Began executing node model.bc_sales.stg_country_code_ref
+[0m17:33:56.693422 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.stg_sales_by_country"
+[0m17:33:56.694166 [debug] [Thread-1 (]: Writing runtime sql for node "model.bc_sales.stg_country_code_ref"
+[0m17:33:56.694954 [debug] [Thread-2 (]: On model.bc_sales.stg_higher_activity_countries: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+    select cc_ref
+    from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`
+    where count > 20
+    order by
+	cc_ref desc
+    limit 1
+
+[0m17:33:56.697614 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:33:56.699096 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:33:56.811939 [debug] [Thread-3 (]: On model.bc_sales.stg_sales_by_country: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.stg_sales_by_country"} */
+
+
+  create or replace view `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_sales_by_country`
+  OPTIONS()
+  as 
+
+-- Q1
+
+select
+  cast(cc_ref as integer) as cc_ref,
+  cast(amount_paid_usd as numeric) as amount_paid_usd,
+
+  cast(country_code as string) as country_code,
+  cast(country as string) as country
+
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_partitioned`;
+
+
+[0m17:33:56.854828 [debug] [Thread-1 (]: On model.bc_sales.stg_country_code_ref: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.stg_country_code_ref"} */
+
+
+  create or replace view `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_country_code_ref`
+  OPTIONS()
+  as 
+
+select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`;
+
+
+[0m17:33:57.983183 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:3619f7e2-0ad0-4983-890e-f9bc5b8bc99c&page=queryresults
+[0m17:33:58.004471 [debug] [Thread-3 (]: Timing info for model.bc_sales.stg_sales_by_country (execute): 17:33:56.589893 => 17:33:58.004158
+[0m17:33:58.005623 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c992020>]}
+[0m17:33:58.006547 [info ] [Thread-3 (]: 3 of 10 OK created sql view model bandcamp_sales_schema.stg_sales_by_country ... [[32mCREATE VIEW (0 processed)[0m in 1.44s]
+[0m17:33:58.008188 [debug] [Thread-3 (]: Finished running node model.bc_sales.stg_sales_by_country
+[0m17:33:58.009392 [debug] [Thread-4 (]: Began running node model.bc_sales.country_facts
+[0m17:33:58.010166 [info ] [Thread-4 (]: 4 of 10 START sql table model bandcamp_sales_schema.country_facts .............. [RUN]
+[0m17:33:58.012086 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.bc_sales.country_facts'
+[0m17:33:58.012618 [debug] [Thread-4 (]: Began compiling node model.bc_sales.country_facts
+[0m17:33:58.017840 [debug] [Thread-4 (]: Writing injected SQL for node "model.bc_sales.country_facts"
+[0m17:33:58.019029 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts (compile): 17:33:58.012921 => 17:33:58.018614
+[0m17:33:58.019616 [debug] [Thread-4 (]: Began executing node model.bc_sales.country_facts
+[0m17:33:58.048071 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:b45c0020-3637-4c78-98d9-93d102640fef&page=queryresults
+[0m17:33:58.056209 [debug] [Thread-1 (]: Timing info for model.bc_sales.stg_country_code_ref (execute): 17:33:56.601128 => 17:33:58.055863
+[0m17:33:58.062712 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c983190>]}
+[0m17:33:58.066971 [debug] [Thread-4 (]: Writing runtime sql for node "model.bc_sales.country_facts"
+[0m17:33:58.068107 [info ] [Thread-1 (]: 1 of 10 OK created sql view model bandcamp_sales_schema.stg_country_code_ref ... [[32mCREATE VIEW (0 processed)[0m in 1.50s]
+[0m17:33:58.069670 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:33:58.070806 [debug] [Thread-1 (]: Finished running node model.bc_sales.stg_country_code_ref
+[0m17:33:58.122420 [debug] [Thread-4 (]: On model.bc_sales.country_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.country_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`country_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+with countries as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_sales_by_country`
+)
+
+select
+    countries.cc_ref as ref,
+    count(countries.cc_ref) as total_transactions,
+    avg(countries.amount_paid_usd) as average_sale_usd,
+    sum(countries.amount_paid_usd) as total_sales_usd,
+from countries
+group by countries.cc_ref
+order by average_sale_usd desc
+    );
+  
+[0m17:33:58.373048 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:cab76c02-fcbc-4b6d-8e5b-cf9a6b58a635&page=queryresults
+[0m17:33:58.374393 [debug] [Thread-2 (]: Writing injected SQL for node "model.bc_sales.stg_higher_activity_countries"
+[0m17:33:58.375499 [debug] [Thread-2 (]: Timing info for model.bc_sales.stg_higher_activity_countries (compile): 17:33:56.568296 => 17:33:58.375136
+[0m17:33:58.376237 [debug] [Thread-2 (]: Began executing node model.bc_sales.stg_higher_activity_countries
+[0m17:33:58.382348 [debug] [Thread-2 (]: Writing runtime sql for node "model.bc_sales.stg_higher_activity_countries"
+[0m17:33:58.383330 [debug] [Thread-2 (]: On model.bc_sales.stg_higher_activity_countries: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+
+  create or replace view `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_higher_activity_countries`
+  OPTIONS()
+  as 
+
+-- Q2, Q3
+
+select
+    cast(cc_ref as integer) as cc_ref,
+    cast(artist_name as string) as artist_name,
+    cast(amount_paid_usd as numeric) as amount_paid_usd,
+    cast(country_code as string) as country_code, --REMOVE THIS TOO??
+    cast(country as string) as country -- TODO: REMOVE THIS LINE
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_clustered`
+where cc_ref <= 115
+order by
+    cc_ref asc,
+    artist_name asc;
+
+
+[0m17:33:59.064694 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:58497a9a-2d00-4188-aa82-0b11bf4d0227&page=queryresults
+[0m17:33:59.067825 [debug] [Thread-2 (]: Timing info for model.bc_sales.stg_higher_activity_countries (execute): 17:33:58.376594 => 17:33:59.067498
+[0m17:33:59.069117 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c8f4d60>]}
+[0m17:33:59.070011 [info ] [Thread-2 (]: 2 of 10 OK created sql view model bandcamp_sales_schema.stg_higher_activity_countries  [[32mCREATE VIEW (0 processed)[0m in 2.51s]
+[0m17:33:59.071234 [debug] [Thread-2 (]: Finished running node model.bc_sales.stg_higher_activity_countries
+[0m17:33:59.072285 [debug] [Thread-3 (]: Began running node model.bc_sales.artist_facts
+[0m17:33:59.073008 [info ] [Thread-3 (]: 5 of 10 START sql table model bandcamp_sales_schema.artist_facts ............... [RUN]
+[0m17:33:59.074194 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.bc_sales.stg_sales_by_country, now model.bc_sales.artist_facts)
+[0m17:33:59.074693 [debug] [Thread-3 (]: Began compiling node model.bc_sales.artist_facts
+[0m17:33:59.079422 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.artist_facts"
+[0m17:33:59.080716 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_facts (compile): 17:33:59.074985 => 17:33:59.080346
+[0m17:33:59.081312 [debug] [Thread-3 (]: Began executing node model.bc_sales.artist_facts
+[0m17:33:59.086139 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.artist_facts"
+[0m17:33:59.087180 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:33:59.145205 [debug] [Thread-3 (]: On model.bc_sales.artist_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.artist_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with sales as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_higher_activity_countries`
+)
+
+select
+    cc_ref as cc_ref,
+    artist_name as artist,
+    sum(amount_paid_usd) as total_sales_usd,
+    avg(amount_paid_usd) as avg_sales_usd,
+from sales
+group by 1,2
+order by 1, 3 desc
+    );
+  
+[0m17:34:00.681776 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:ac9c98bf-67c6-470b-9fbd-0a446a03113c&page=queryresults
+[0m17:34:00.685611 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts (execute): 17:33:58.019998 => 17:34:00.685269
+[0m17:34:00.687105 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c298c70>]}
+[0m17:34:00.688205 [info ] [Thread-4 (]: 4 of 10 OK created sql table model bandcamp_sales_schema.country_facts ......... [[32mCREATE TABLE (186.0 rows, 15.3 MiB processed)[0m in 2.68s]
+[0m17:34:00.689912 [debug] [Thread-4 (]: Finished running node model.bc_sales.country_facts
+[0m17:34:00.690971 [debug] [Thread-4 (]: Began running node model.bc_sales.country_facts_view
+[0m17:34:00.691731 [info ] [Thread-4 (]: 6 of 10 START sql table model bandcamp_sales_schema.country_facts_view ......... [RUN]
+[0m17:34:00.693816 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.bc_sales.country_facts, now model.bc_sales.country_facts_view)
+[0m17:34:00.694380 [debug] [Thread-4 (]: Began compiling node model.bc_sales.country_facts_view
+[0m17:34:00.700825 [debug] [Thread-4 (]: Writing injected SQL for node "model.bc_sales.country_facts_view"
+[0m17:34:00.702336 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts_view (compile): 17:34:00.694700 => 17:34:00.701907
+[0m17:34:00.703058 [debug] [Thread-4 (]: Began executing node model.bc_sales.country_facts_view
+[0m17:34:00.712443 [debug] [Thread-4 (]: Writing runtime sql for node "model.bc_sales.country_facts_view"
+[0m17:34:00.714442 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:34:00.766073 [debug] [Thread-4 (]: On model.bc_sales.country_facts_view: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.country_facts_view"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`country_facts_view`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_country_code_ref`
+)
+
+select
+    facts.ref as ref,
+    facts.total_transactions as total_transactions,
+    facts.average_sale_usd as avg_sale_usd,
+    facts.total_sales_usd as total_sales_usd,
+    refs.country_code as cc
+from facts
+left join refs
+on facts.ref = refs.cc_ref
+where total_transactions > 100
+order by 3 desc
+    );
+  
+[0m17:34:02.575336 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:083c8dc3-58e3-4419-b23e-8f4d9740d2c0&page=queryresults
+[0m17:34:02.578765 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_facts (execute): 17:33:59.081674 => 17:34:02.578445
+[0m17:34:02.580052 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c8f79d0>]}
+[0m17:34:02.581002 [info ] [Thread-3 (]: 5 of 10 OK created sql table model bandcamp_sales_schema.artist_facts .......... [[32mCREATE TABLE (361.0k rows, 29.5 MiB processed)[0m in 3.51s]
+[0m17:34:02.582495 [debug] [Thread-3 (]: Finished running node model.bc_sales.artist_facts
+[0m17:34:02.583512 [debug] [Thread-3 (]: Began running node model.bc_sales.artist_facts_view
+[0m17:34:02.584090 [debug] [Thread-1 (]: Began running node model.bc_sales.artist_max_avg_facts
+[0m17:34:02.584651 [debug] [Thread-2 (]: Began running node model.bc_sales.artist_max_sales_facts
+[0m17:34:02.587270 [info ] [Thread-2 (]: 9 of 10 START sql table model bandcamp_sales_schema.artist_max_sales_facts ..... [RUN]
+[0m17:34:02.588677 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.bc_sales.stg_higher_activity_countries, now model.bc_sales.artist_max_sales_facts)
+[0m17:34:02.585440 [info ] [Thread-3 (]: 7 of 10 START sql table model bandcamp_sales_schema.artist_facts_view .......... [RUN]
+[0m17:34:02.586375 [info ] [Thread-1 (]: 8 of 10 START sql table model bandcamp_sales_schema.artist_max_avg_facts ....... [RUN]
+[0m17:34:02.589283 [debug] [Thread-2 (]: Began compiling node model.bc_sales.artist_max_sales_facts
+[0m17:34:02.590555 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.bc_sales.artist_facts, now model.bc_sales.artist_facts_view)
+[0m17:34:02.591449 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bc_sales.stg_country_code_ref, now model.bc_sales.artist_max_avg_facts)
+[0m17:34:02.599159 [debug] [Thread-3 (]: Began compiling node model.bc_sales.artist_facts_view
+[0m17:34:02.600054 [debug] [Thread-1 (]: Began compiling node model.bc_sales.artist_max_avg_facts
+[0m17:34:02.604752 [debug] [Thread-2 (]: Writing injected SQL for node "model.bc_sales.artist_max_sales_facts"
+[0m17:34:02.609824 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.artist_facts_view"
+[0m17:34:02.614951 [debug] [Thread-1 (]: Writing injected SQL for node "model.bc_sales.artist_max_avg_facts"
+[0m17:34:02.616376 [debug] [Thread-2 (]: Timing info for model.bc_sales.artist_max_sales_facts (compile): 17:34:02.591920 => 17:34:02.615950
+[0m17:34:02.617604 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_facts_view (compile): 17:34:02.605246 => 17:34:02.617237
+[0m17:34:02.618354 [debug] [Thread-1 (]: Timing info for model.bc_sales.artist_max_avg_facts (compile): 17:34:02.610439 => 17:34:02.618009
+[0m17:34:02.620582 [debug] [Thread-1 (]: Began executing node model.bc_sales.artist_max_avg_facts
+[0m17:34:02.619913 [debug] [Thread-3 (]: Began executing node model.bc_sales.artist_facts_view
+[0m17:34:02.619134 [debug] [Thread-2 (]: Began executing node model.bc_sales.artist_max_sales_facts
+[0m17:34:02.625618 [debug] [Thread-1 (]: Writing runtime sql for node "model.bc_sales.artist_max_avg_facts"
+[0m17:34:02.636556 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:34:02.635271 [debug] [Thread-2 (]: Writing runtime sql for node "model.bc_sales.artist_max_sales_facts"
+[0m17:34:02.630474 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.artist_facts_view"
+[0m17:34:02.644706 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:34:02.652603 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:34:02.737828 [debug] [Thread-3 (]: On model.bc_sales.artist_facts_view: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.artist_facts_view"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_facts_view`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_country_code_ref`
+),
+
+with max_total_sales as (
+    select
+        facts.cc_ref as ref,
+        --facts.artist,
+        max(facts.total_usd) as max_sales_usd
+    from facts
+    group by 1
+    order by 1
+)
+
+select
+    max_total_sales.ref as ref,
+    max_total_sales.max_sales_usd as max_sales_usd,
+    facts.artist as artist
+from max_total_sales
+left join facts
+on max_total_sales.ref = facts.cc_ref
+and max_total_sales.max_sales_usd = facts.total_usd
+    );
+  
+[0m17:34:02.770074 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:051585f7-1836-4758-bbe3-1731e01ca0f9&page=queryresults
+[0m17:34:02.774588 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts_view (execute): 17:34:00.703465 => 17:34:02.774081
+[0m17:34:02.784723 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c8f4a30>]}
+[0m17:34:02.786270 [info ] [Thread-4 (]: 6 of 10 OK created sql table model bandcamp_sales_schema.country_facts_view .... [[32mCREATE TABLE (78.0 rows, 10.9 KiB processed)[0m in 2.09s]
+[0m17:34:02.788621 [debug] [Thread-4 (]: Finished running node model.bc_sales.country_facts_view
+[0m17:34:02.806151 [debug] [Thread-2 (]: On model.bc_sales.artist_max_sales_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.artist_max_sales_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_max_sales_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_country_code_ref`
+),
+
+max_total_sales as (
+    select
+        facts.cc_ref as ref,
+        --facts.artist,
+        max(facts.total_sales_usd) as max_sales_usd
+    from facts
+    group by 1
+    order by 1
+)
+
+select
+    max_total_sales.ref as ref,
+    max_total_sales.max_sales_usd as max_sales_usd,
+    facts.artist as artist
+from max_total_sales
+left join facts
+on max_total_sales.ref = facts.cc_ref
+and max_total_sales.max_sales_usd = facts.total_sales_usd
+order by 1
+    );
+  
+[0m17:34:02.815672 [debug] [Thread-1 (]: On model.bc_sales.artist_max_avg_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.artist_max_avg_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_max_avg_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_country_code_ref`
+),
+
+max_avg_sales as (
+    select
+        facts.cc_ref as ref,
+        --facts.artist,
+        max(facts.avg_sales_usd) as max_avg_usd
+    from facts
+    group by 1
+)
+
+select
+    max_avg_sales.ref as ref,
+    max_avg_sales.max_avg_usd as max_avg_usd,
+    facts.artist as artist
+from max_avg_sales
+left join facts
+on max_avg_sales.ref = facts.cc_ref
+and max_avg_sales.max_avg_usd = facts.avg_sales_usd
+order by 1
+    );
+  
+[0m17:34:03.571924 [debug] [Thread-3 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword SELECT but got keyword WITH at [22:1]')
+[0m17:34:04.408568 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:US:be93f519-13ac-4ff0-9d3e-8d604aa1c65d&page=queryresults
+[0m17:34:04.410329 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_facts_view (execute): 17:34:02.626164 => 17:34:04.409952
+[0m17:34:04.418116 [debug] [Thread-3 (]: Database Error in model artist_facts_view (models/core/artist_facts_view.sql)
+  Syntax error: Expected keyword SELECT but got keyword WITH at [22:1]
+  compiled Code at target/run/bc_sales/models/core/artist_facts_view.sql
+[0m17:34:04.419126 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c10c430>]}
+[0m17:34:04.420278 [error] [Thread-3 (]: 7 of 10 ERROR creating sql table model bandcamp_sales_schema.artist_facts_view . [[31mERROR[0m in 1.83s]
+[0m17:34:04.421485 [debug] [Thread-3 (]: Finished running node model.bc_sales.artist_facts_view
+[0m17:34:05.668044 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:ee4f42ed-2142-45e0-b01a-a2ac3a420684&page=queryresults
+[0m17:34:05.671082 [debug] [Thread-2 (]: Timing info for model.bc_sales.artist_max_sales_facts (execute): 17:34:02.631048 => 17:34:05.670773
+[0m17:34:05.672352 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c10d0c0>]}
+[0m17:34:05.673303 [info ] [Thread-2 (]: 9 of 10 OK created sql table model bandcamp_sales_schema.artist_max_sales_facts  [[32mCREATE TABLE (118.0 rows, 13.5 MiB processed)[0m in 3.08s]
+[0m17:34:05.674762 [debug] [Thread-2 (]: Finished running node model.bc_sales.artist_max_sales_facts
+[0m17:34:05.714405 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:efe892c0-d62a-4524-b3c8-b5a929f3b761&page=queryresults
+[0m17:34:05.717541 [debug] [Thread-1 (]: Timing info for model.bc_sales.artist_max_avg_facts (execute): 17:34:02.620954 => 17:34:05.717256
+[0m17:34:05.719233 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c10ccd0>]}
+[0m17:34:05.720211 [info ] [Thread-1 (]: 8 of 10 OK created sql table model bandcamp_sales_schema.artist_max_avg_facts .. [[32mCREATE TABLE (119.0 rows, 13.5 MiB processed)[0m in 3.13s]
+[0m17:34:05.721578 [debug] [Thread-1 (]: Finished running node model.bc_sales.artist_max_avg_facts
+[0m17:34:05.722722 [debug] [Thread-4 (]: Began running node model.bc_sales.complete_artist_by_country
+[0m17:34:05.723532 [info ] [Thread-4 (]: 10 of 10 START sql table model bandcamp_sales_schema.complete_artist_by_country  [RUN]
+[0m17:34:05.724807 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.bc_sales.country_facts_view, now model.bc_sales.complete_artist_by_country)
+[0m17:34:05.725663 [debug] [Thread-4 (]: Began compiling node model.bc_sales.complete_artist_by_country
+[0m17:34:05.734581 [debug] [Thread-4 (]: Writing injected SQL for node "model.bc_sales.complete_artist_by_country"
+[0m17:34:05.735950 [debug] [Thread-4 (]: Timing info for model.bc_sales.complete_artist_by_country (compile): 17:34:05.726003 => 17:34:05.735470
+[0m17:34:05.736586 [debug] [Thread-4 (]: Began executing node model.bc_sales.complete_artist_by_country
+[0m17:34:05.741629 [debug] [Thread-4 (]: Writing runtime sql for node "model.bc_sales.complete_artist_by_country"
+[0m17:34:05.742690 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:34:05.791516 [debug] [Thread-4 (]: On model.bc_sales.complete_artist_by_country: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "dev", "node_id": "model.bc_sales.complete_artist_by_country"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bandcamp_sales_schema`.`complete_artist_by_country`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with refs as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`stg_country_code_ref`
+),
+
+max_totals as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_max_sales_facts`
+),
+
+max_avg as (
+    select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`artist_max_avg_facts`
+)
+
+select
+    refs.cc_ref as ref,
+    refs.country_code,
+    max_totals.artist as highest_selling,
+    max_avg.artist as highest_average,
+from refs
+right join max_totals
+on refs.cc_ref = max_totals.ref
+right join max_avg
+on refs.cc_ref = max_avg.ref
+order by 1
+    );
+  
+[0m17:34:08.073514 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:62cf6a49-9726-4ec0-8ff0-a47abe12e812&page=queryresults
+[0m17:34:08.076983 [debug] [Thread-4 (]: Timing info for model.bc_sales.complete_artist_by_country (execute): 17:34:05.736944 => 17:34:08.076669
+[0m17:34:08.078410 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1babb787-0f8c-4cfd-9de2-f93e8727f85c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6c10ca90>]}
+[0m17:34:08.079378 [info ] [Thread-4 (]: 10 of 10 OK created sql table model bandcamp_sales_schema.complete_artist_by_country  [[32mCREATE TABLE (123.0 rows, 7.4 KiB processed)[0m in 2.35s]
+[0m17:34:08.080698 [debug] [Thread-4 (]: Finished running node model.bc_sales.complete_artist_by_country
+[0m17:34:08.084043 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:34:08.084552 [debug] [MainThread]: Connection 'model.bc_sales.artist_max_avg_facts' was properly closed.
+[0m17:34:08.084906 [debug] [MainThread]: Connection 'model.bc_sales.artist_max_sales_facts' was properly closed.
+[0m17:34:08.085247 [debug] [MainThread]: Connection 'model.bc_sales.artist_facts_view' was properly closed.
+[0m17:34:08.085558 [debug] [MainThread]: Connection 'model.bc_sales.complete_artist_by_country' was properly closed.
+[0m17:34:08.086059 [info ] [MainThread]: 
+[0m17:34:08.087195 [info ] [MainThread]: Finished running 3 view models, 7 table models in 0 hours 0 minutes and 12.26 seconds (12.26s).
+[0m17:34:08.090211 [debug] [MainThread]: Command end result
+[0m17:34:08.107099 [info ] [MainThread]: 
+[0m17:34:08.108312 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m17:34:08.109100 [info ] [MainThread]: 
+[0m17:34:08.109856 [error] [MainThread]: [33mDatabase Error in model artist_facts_view (models/core/artist_facts_view.sql)[0m
+[0m17:34:08.110453 [error] [MainThread]:   Syntax error: Expected keyword SELECT but got keyword WITH at [22:1]
+[0m17:34:08.111074 [error] [MainThread]:   compiled Code at target/run/bc_sales/models/core/artist_facts_view.sql
+[0m17:34:08.111699 [info ] [MainThread]: 
+[0m17:34:08.112380 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=1 SKIP=0 TOTAL=10
+[0m17:34:08.113513 [debug] [MainThread]: Command `dbt build` failed at 17:34:08.113297 after 15.03 seconds
+[0m17:34:08.114064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7fc4a500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b7f7ba380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b6cad07f0>]}
+[0m17:34:08.114666 [debug] [MainThread]: Flushing usage events
+[0m17:36:09.651041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0da04a5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0d8fd3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0d8fd3880>]}
+
+
+============================== 17:36:09.654808 | b7123d0a-cd71-406c-b650-dab9a677e762 ==============================
+[0m17:36:09.654808 [info ] [MainThread]: Running with dbt=1.5.0
+[0m17:36:09.656625 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/j/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/j/bcsales/dbt/bc_sales/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m17:36:10.671604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0d8fd3910>]}
+[0m17:36:10.684292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6e33820>]}
+[0m17:36:10.707166 [debug] [MainThread]: checksum: 2b6fdde617d5a0a990757f78fa0717194984bf092aff54287207b08feaec457a, vars: {}, profile: , target: prod, version: 1.5.0
+[0m17:36:10.722213 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:36:10.723353 [debug] [MainThread]: previous checksum: 2b6fdde617d5a0a990757f78fa0717194984bf092aff54287207b08feaec457a, current checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda
+[0m17:36:10.723979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6e3a290>]}
+[0m17:36:11.917764 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_country_code_ref.sql
+[0m17:36:11.935804 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales_by_country.sql
+[0m17:36:11.940313 [debug] [MainThread]: 1603: static parser failed on staging/stg_higher_activity_countries.sql
+[0m17:36:11.962158 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_higher_activity_countries.sql
+[0m17:36:11.964689 [debug] [MainThread]: 1699: static parser successfully parsed core/complete_artist_by_country.sql
+[0m17:36:11.968988 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_facts_view.sql
+[0m17:36:11.973910 [debug] [MainThread]: 1699: static parser successfully parsed core/country_facts_view.sql
+[0m17:36:11.978983 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_facts.sql
+[0m17:36:11.983579 [debug] [MainThread]: 1699: static parser successfully parsed core/country_facts.sql
+[0m17:36:11.988166 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_max_sales_facts.sql
+[0m17:36:11.993198 [debug] [MainThread]: 1699: static parser successfully parsed core/artist_max_avg_facts.sql
+[0m17:36:12.203734 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.bc_sales.example
+[0m17:36:12.212173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0d8fd3880>]}
+[0m17:36:12.227009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6e39e10>]}
+[0m17:36:12.227847 [info ] [MainThread]: Found 10 models, 0 tests, 0 snapshots, 0 analyses, 465 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics, 0 groups
+[0m17:36:12.230377 [info ] [MainThread]: 
+[0m17:36:12.231968 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:36:12.234050 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_datatalksclub-375802'
+[0m17:36:12.234740 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:12.585200 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_datatalksclub-375802, now list_datatalksclub-375802_bc_production)
+[0m17:36:12.586114 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:36:12.918999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6d02ce0>]}
+[0m17:36:12.920450 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:36:12.921257 [info ] [MainThread]: 
+[0m17:36:12.927379 [debug] [Thread-1 (]: Began running node model.bc_sales.stg_country_code_ref
+[0m17:36:12.928284 [debug] [Thread-2 (]: Began running node model.bc_sales.stg_higher_activity_countries
+[0m17:36:12.930904 [info ] [Thread-2 (]: 2 of 9 START sql view model bc_production.stg_higher_activity_countries ........ [RUN]
+[0m17:36:12.929169 [info ] [Thread-1 (]: 1 of 9 START sql view model bc_production.stg_country_code_ref ................. [RUN]
+[0m17:36:12.930131 [debug] [Thread-3 (]: Began running node model.bc_sales.stg_sales_by_country
+[0m17:36:12.932378 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.bc_sales.stg_higher_activity_countries'
+[0m17:36:12.933774 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_datatalksclub-375802_bc_production, now model.bc_sales.stg_country_code_ref)
+[0m17:36:12.935326 [debug] [Thread-2 (]: Began compiling node model.bc_sales.stg_higher_activity_countries
+[0m17:36:12.934549 [info ] [Thread-3 (]: 3 of 9 START sql view model bc_production.stg_sales_by_country ................. [RUN]
+[0m17:36:12.936288 [debug] [Thread-1 (]: Began compiling node model.bc_sales.stg_country_code_ref
+[0m17:36:12.943189 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:36:12.944829 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.bc_sales.stg_sales_by_country'
+[0m17:36:12.949606 [debug] [Thread-1 (]: Writing injected SQL for node "model.bc_sales.stg_country_code_ref"
+[0m17:36:12.950610 [debug] [Thread-3 (]: Began compiling node model.bc_sales.stg_sales_by_country
+[0m17:36:12.955617 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.stg_sales_by_country"
+[0m17:36:12.957090 [debug] [Thread-1 (]: Timing info for model.bc_sales.stg_country_code_ref (compile): 17:36:12.945439 => 17:36:12.956627
+[0m17:36:12.960521 [debug] [Thread-1 (]: Began executing node model.bc_sales.stg_country_code_ref
+[0m17:36:12.968827 [debug] [Thread-3 (]: Timing info for model.bc_sales.stg_sales_by_country (compile): 17:36:12.951302 => 17:36:12.968122
+[0m17:36:12.969914 [debug] [Thread-3 (]: Began executing node model.bc_sales.stg_sales_by_country
+[0m17:36:13.068406 [debug] [Thread-1 (]: Writing runtime sql for node "model.bc_sales.stg_country_code_ref"
+[0m17:36:13.069148 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.stg_sales_by_country"
+[0m17:36:13.070168 [debug] [Thread-2 (]: On model.bc_sales.stg_higher_activity_countries: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+    select cc_ref
+    from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`
+    where count > 20
+    order by
+	cc_ref desc
+    limit 1
+
+[0m17:36:13.071138 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:36:13.081211 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:36:13.164076 [debug] [Thread-1 (]: On model.bc_sales.stg_country_code_ref: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_country_code_ref"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+  OPTIONS()
+  as 
+
+select * from `datatalksclub-375802`.`bandcamp_sales_schema`.`country_code_ref`;
+
+
+[0m17:36:13.221475 [debug] [Thread-3 (]: On model.bc_sales.stg_sales_by_country: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_sales_by_country"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_sales_by_country`
+  OPTIONS()
+  as 
+
+-- Q1
+
+select
+  cast(cc_ref as integer) as cc_ref,
+  cast(amount_paid_usd as numeric) as amount_paid_usd,
+
+  cast(country_code as string) as country_code,
+  cast(country as string) as country
+
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_partitioned`;
+
+
+[0m17:36:14.044552 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:85bb03ae-af19-4bbe-9b4f-2b6886cdcdda&page=queryresults
+[0m17:36:14.064431 [debug] [Thread-1 (]: Timing info for model.bc_sales.stg_country_code_ref (execute): 17:36:12.961102 => 17:36:14.064133
+[0m17:36:14.065651 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6d41c60>]}
+[0m17:36:14.066653 [info ] [Thread-1 (]: 1 of 9 OK created sql view model bc_production.stg_country_code_ref ............ [[32mCREATE VIEW (0 processed)[0m in 1.13s]
+[0m17:36:14.070631 [debug] [Thread-1 (]: Finished running node model.bc_sales.stg_country_code_ref
+[0m17:36:14.285108 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:24ee2c35-cf5d-4a9e-90b3-a7396d0d9986&page=queryresults
+[0m17:36:14.288339 [debug] [Thread-3 (]: Timing info for model.bc_sales.stg_sales_by_country (execute): 17:36:12.970489 => 17:36:14.288006
+[0m17:36:14.289663 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6bcdb70>]}
+[0m17:36:14.290616 [info ] [Thread-3 (]: 3 of 9 OK created sql view model bc_production.stg_sales_by_country ............ [[32mCREATE VIEW (0 processed)[0m in 1.35s]
+[0m17:36:14.291859 [debug] [Thread-3 (]: Finished running node model.bc_sales.stg_sales_by_country
+[0m17:36:14.292876 [debug] [Thread-4 (]: Began running node model.bc_sales.country_facts
+[0m17:36:14.293546 [info ] [Thread-4 (]: 4 of 9 START sql table model bc_production.country_facts ....................... [RUN]
+[0m17:36:14.294971 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.bc_sales.country_facts'
+[0m17:36:14.295543 [debug] [Thread-4 (]: Began compiling node model.bc_sales.country_facts
+[0m17:36:14.300914 [debug] [Thread-4 (]: Writing injected SQL for node "model.bc_sales.country_facts"
+[0m17:36:14.302038 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts (compile): 17:36:14.295970 => 17:36:14.301653
+[0m17:36:14.303376 [debug] [Thread-4 (]: Began executing node model.bc_sales.country_facts
+[0m17:36:14.345870 [debug] [Thread-4 (]: Writing runtime sql for node "model.bc_sales.country_facts"
+[0m17:36:14.347143 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:36:14.399948 [debug] [Thread-4 (]: On model.bc_sales.country_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.country_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bc_production`.`country_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+with countries as (
+    select * from `datatalksclub-375802`.`bc_production`.`stg_sales_by_country`
+)
+
+select
+    countries.cc_ref as ref,
+    count(countries.cc_ref) as total_transactions,
+    avg(countries.amount_paid_usd) as average_sale_usd,
+    sum(countries.amount_paid_usd) as total_sales_usd,
+from countries
+group by countries.cc_ref
+order by average_sale_usd desc
+    );
+  
+[0m17:36:14.485497 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:1023c894-2a2e-4e76-a745-2b61f12777ac&page=queryresults
+[0m17:36:14.486854 [debug] [Thread-2 (]: Writing injected SQL for node "model.bc_sales.stg_higher_activity_countries"
+[0m17:36:14.487958 [debug] [Thread-2 (]: Timing info for model.bc_sales.stg_higher_activity_countries (compile): 17:36:12.936686 => 17:36:14.487523
+[0m17:36:14.488561 [debug] [Thread-2 (]: Began executing node model.bc_sales.stg_higher_activity_countries
+[0m17:36:14.493917 [debug] [Thread-2 (]: Writing runtime sql for node "model.bc_sales.stg_higher_activity_countries"
+[0m17:36:14.494785 [debug] [Thread-2 (]: On model.bc_sales.stg_higher_activity_countries: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.stg_higher_activity_countries"} */
+
+
+  create or replace view `datatalksclub-375802`.`bc_production`.`stg_higher_activity_countries`
+  OPTIONS()
+  as 
+
+-- Q2, Q3
+
+select
+    cast(cc_ref as integer) as cc_ref,
+    cast(artist_name as string) as artist_name,
+    cast(amount_paid_usd as numeric) as amount_paid_usd,
+    cast(country_code as string) as country_code, --REMOVE THIS TOO??
+    cast(country as string) as country -- TODO: REMOVE THIS LINE
+from `datatalksclub-375802`.`bandcamp_sales_schema`.`sales_clustered`
+where cc_ref <= 115
+order by
+    cc_ref asc,
+    artist_name asc;
+
+
+[0m17:36:15.072984 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:685c027f-c58d-41bf-9518-4b6656d0d521&page=queryresults
+[0m17:36:15.075923 [debug] [Thread-2 (]: Timing info for model.bc_sales.stg_higher_activity_countries (execute): 17:36:14.488950 => 17:36:15.075579
+[0m17:36:15.077106 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6c2edd0>]}
+[0m17:36:15.077996 [info ] [Thread-2 (]: 2 of 9 OK created sql view model bc_production.stg_higher_activity_countries ... [[32mCREATE VIEW (0 processed)[0m in 2.15s]
+[0m17:36:15.079206 [debug] [Thread-2 (]: Finished running node model.bc_sales.stg_higher_activity_countries
+[0m17:36:15.080201 [debug] [Thread-3 (]: Began running node model.bc_sales.artist_facts
+[0m17:36:15.080892 [info ] [Thread-3 (]: 5 of 9 START sql table model bc_production.artist_facts ........................ [RUN]
+[0m17:36:15.082300 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.bc_sales.stg_sales_by_country, now model.bc_sales.artist_facts)
+[0m17:36:15.082970 [debug] [Thread-3 (]: Began compiling node model.bc_sales.artist_facts
+[0m17:36:15.094007 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.artist_facts"
+[0m17:36:15.095168 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_facts (compile): 17:36:15.083340 => 17:36:15.094795
+[0m17:36:15.095823 [debug] [Thread-3 (]: Began executing node model.bc_sales.artist_facts
+[0m17:36:15.100570 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.artist_facts"
+[0m17:36:15.101520 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:36:15.151004 [debug] [Thread-3 (]: On model.bc_sales.artist_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.artist_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bc_production`.`artist_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with sales as (
+    select * from `datatalksclub-375802`.`bc_production`.`stg_higher_activity_countries`
+)
+
+select
+    cc_ref as cc_ref,
+    artist_name as artist,
+    sum(amount_paid_usd) as total_sales_usd,
+    avg(amount_paid_usd) as avg_sales_usd,
+from sales
+group by 1,2
+order by 1, 3 desc
+    );
+  
+[0m17:36:16.648347 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:21008db2-45b7-44fc-b970-b14937aff774&page=queryresults
+[0m17:36:16.651681 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts (execute): 17:36:14.304179 => 17:36:16.651315
+[0m17:36:16.653397 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c65f7d90>]}
+[0m17:36:16.654792 [info ] [Thread-4 (]: 4 of 9 OK created sql table model bc_production.country_facts .................. [[32mCREATE TABLE (186.0 rows, 15.3 MiB processed)[0m in 2.36s]
+[0m17:36:16.656152 [debug] [Thread-4 (]: Finished running node model.bc_sales.country_facts
+[0m17:36:16.657097 [debug] [Thread-4 (]: Began running node model.bc_sales.country_facts_view
+[0m17:36:16.657765 [info ] [Thread-4 (]: 6 of 9 START sql table model bc_production.country_facts_view .................. [RUN]
+[0m17:36:16.659262 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.bc_sales.country_facts, now model.bc_sales.country_facts_view)
+[0m17:36:16.659804 [debug] [Thread-4 (]: Began compiling node model.bc_sales.country_facts_view
+[0m17:36:16.665513 [debug] [Thread-4 (]: Writing injected SQL for node "model.bc_sales.country_facts_view"
+[0m17:36:16.666627 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts_view (compile): 17:36:16.660158 => 17:36:16.666264
+[0m17:36:16.667194 [debug] [Thread-4 (]: Began executing node model.bc_sales.country_facts_view
+[0m17:36:16.672312 [debug] [Thread-4 (]: Writing runtime sql for node "model.bc_sales.country_facts_view"
+[0m17:36:16.673308 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:36:16.723106 [debug] [Thread-4 (]: On model.bc_sales.country_facts_view: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.country_facts_view"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bc_production`.`country_facts_view`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bc_production`.`country_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+)
+
+select
+    facts.ref as ref,
+    facts.total_transactions as total_transactions,
+    facts.average_sale_usd as avg_sale_usd,
+    facts.total_sales_usd as total_sales_usd,
+    refs.country_code as cc
+from facts
+left join refs
+on facts.ref = refs.cc_ref
+where total_transactions > 100
+order by 3 desc
+    );
+  
+[0m17:36:18.581298 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:c6b10c8e-0646-4fe1-a55c-deae322eaa06&page=queryresults
+[0m17:36:18.584601 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_facts (execute): 17:36:15.096173 => 17:36:18.584260
+[0m17:36:18.585902 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6c2eda0>]}
+[0m17:36:18.586955 [info ] [Thread-3 (]: 5 of 9 OK created sql table model bc_production.artist_facts ................... [[32mCREATE TABLE (361.0k rows, 29.5 MiB processed)[0m in 3.50s]
+[0m17:36:18.588771 [debug] [Thread-3 (]: Finished running node model.bc_sales.artist_facts
+[0m17:36:18.590275 [debug] [Thread-3 (]: Began running node model.bc_sales.artist_max_avg_facts
+[0m17:36:18.590984 [debug] [Thread-1 (]: Began running node model.bc_sales.artist_max_sales_facts
+[0m17:36:18.591854 [info ] [Thread-3 (]: 7 of 9 START sql table model bc_production.artist_max_avg_facts ................ [RUN]
+[0m17:36:18.592561 [info ] [Thread-1 (]: 8 of 9 START sql table model bc_production.artist_max_sales_facts .............. [RUN]
+[0m17:36:18.595221 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bc_sales.stg_country_code_ref, now model.bc_sales.artist_max_sales_facts)
+[0m17:36:18.594276 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.bc_sales.artist_facts, now model.bc_sales.artist_max_avg_facts)
+[0m17:36:18.595856 [debug] [Thread-1 (]: Began compiling node model.bc_sales.artist_max_sales_facts
+[0m17:36:18.596444 [debug] [Thread-3 (]: Began compiling node model.bc_sales.artist_max_avg_facts
+[0m17:36:18.603123 [debug] [Thread-1 (]: Writing injected SQL for node "model.bc_sales.artist_max_sales_facts"
+[0m17:36:18.609515 [debug] [Thread-3 (]: Writing injected SQL for node "model.bc_sales.artist_max_avg_facts"
+[0m17:36:18.611135 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_max_avg_facts (compile): 17:36:18.603829 => 17:36:18.610706
+[0m17:36:18.612102 [debug] [Thread-1 (]: Timing info for model.bc_sales.artist_max_sales_facts (compile): 17:36:18.596852 => 17:36:18.611613
+[0m17:36:18.612718 [debug] [Thread-3 (]: Began executing node model.bc_sales.artist_max_avg_facts
+[0m17:36:18.613361 [debug] [Thread-1 (]: Began executing node model.bc_sales.artist_max_sales_facts
+[0m17:36:18.624388 [debug] [Thread-1 (]: Writing runtime sql for node "model.bc_sales.artist_max_sales_facts"
+[0m17:36:18.633124 [debug] [Thread-3 (]: Writing runtime sql for node "model.bc_sales.artist_max_avg_facts"
+[0m17:36:18.634568 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:36:18.635397 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:36:18.730264 [debug] [Thread-3 (]: On model.bc_sales.artist_max_avg_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.artist_max_avg_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bc_production`.`artist_max_avg_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bc_production`.`artist_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+),
+
+max_avg_sales as (
+    select
+        facts.cc_ref as ref,
+        --facts.artist,
+        max(facts.avg_sales_usd) as max_avg_usd
+    from facts
+    group by 1
+)
+
+select
+    max_avg_sales.ref as ref,
+    max_avg_sales.max_avg_usd as max_avg_usd,
+    facts.artist as artist
+from max_avg_sales
+left join facts
+on max_avg_sales.ref = facts.cc_ref
+and max_avg_sales.max_avg_usd = facts.avg_sales_usd
+order by 1
+    );
+  
+[0m17:36:18.733008 [debug] [Thread-1 (]: On model.bc_sales.artist_max_sales_facts: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.artist_max_sales_facts"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bc_production`.`artist_max_sales_facts`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with facts as (
+    select * from `datatalksclub-375802`.`bc_production`.`artist_facts`
+),
+
+refs as (
+    select * from `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+),
+
+max_total_sales as (
+    select
+        facts.cc_ref as ref,
+        --facts.artist,
+        max(facts.total_sales_usd) as max_sales_usd
+    from facts
+    group by 1
+    order by 1
+)
+
+select
+    max_total_sales.ref as ref,
+    max_total_sales.max_sales_usd as max_sales_usd,
+    facts.artist as artist
+from max_total_sales
+left join facts
+on max_total_sales.ref = facts.cc_ref
+and max_total_sales.max_sales_usd = facts.total_sales_usd
+order by 1
+    );
+  
+[0m17:36:18.935702 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:ba9cf089-6ffa-4513-b39e-7a8a42daa13e&page=queryresults
+[0m17:36:18.938680 [debug] [Thread-4 (]: Timing info for model.bc_sales.country_facts_view (execute): 17:36:16.667548 => 17:36:18.938389
+[0m17:36:18.940787 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6637b20>]}
+[0m17:36:18.944613 [info ] [Thread-4 (]: 6 of 9 OK created sql table model bc_production.country_facts_view ............. [[32mCREATE TABLE (78.0 rows, 10.9 KiB processed)[0m in 2.28s]
+[0m17:36:18.945880 [debug] [Thread-4 (]: Finished running node model.bc_sales.country_facts_view
+[0m17:36:21.099384 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:f8b08ed1-ab77-436f-9af7-3ac9cb0a8cb7&page=queryresults
+[0m17:36:21.102513 [debug] [Thread-1 (]: Timing info for model.bc_sales.artist_max_sales_facts (execute): 17:36:18.618348 => 17:36:21.102215
+[0m17:36:21.104350 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c445d000>]}
+[0m17:36:21.105372 [info ] [Thread-1 (]: 8 of 9 OK created sql table model bc_production.artist_max_sales_facts ......... [[32mCREATE TABLE (118.0 rows, 13.5 MiB processed)[0m in 2.51s]
+[0m17:36:21.106726 [debug] [Thread-1 (]: Finished running node model.bc_sales.artist_max_sales_facts
+[0m17:36:21.409139 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:bb5f9869-6346-4d17-8ff4-c318c507f34b&page=queryresults
+[0m17:36:21.411853 [debug] [Thread-3 (]: Timing info for model.bc_sales.artist_max_avg_facts (execute): 17:36:18.613791 => 17:36:21.411504
+[0m17:36:21.413031 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c663b370>]}
+[0m17:36:21.413971 [info ] [Thread-3 (]: 7 of 9 OK created sql table model bc_production.artist_max_avg_facts ........... [[32mCREATE TABLE (119.0 rows, 13.5 MiB processed)[0m in 2.82s]
+[0m17:36:21.415197 [debug] [Thread-3 (]: Finished running node model.bc_sales.artist_max_avg_facts
+[0m17:36:21.416481 [debug] [Thread-2 (]: Began running node model.bc_sales.complete_artist_by_country
+[0m17:36:21.417186 [info ] [Thread-2 (]: 9 of 9 START sql table model bc_production.complete_artist_by_country .......... [RUN]
+[0m17:36:21.418807 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.bc_sales.stg_higher_activity_countries, now model.bc_sales.complete_artist_by_country)
+[0m17:36:21.419819 [debug] [Thread-2 (]: Began compiling node model.bc_sales.complete_artist_by_country
+[0m17:36:21.427710 [debug] [Thread-2 (]: Writing injected SQL for node "model.bc_sales.complete_artist_by_country"
+[0m17:36:21.429197 [debug] [Thread-2 (]: Timing info for model.bc_sales.complete_artist_by_country (compile): 17:36:21.420220 => 17:36:21.428757
+[0m17:36:21.429892 [debug] [Thread-2 (]: Began executing node model.bc_sales.complete_artist_by_country
+[0m17:36:21.435262 [debug] [Thread-2 (]: Writing runtime sql for node "model.bc_sales.complete_artist_by_country"
+[0m17:36:21.436338 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:36:21.486549 [debug] [Thread-2 (]: On model.bc_sales.complete_artist_by_country: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "bc_sales", "target_name": "prod", "node_id": "model.bc_sales.complete_artist_by_country"} */
+
+  
+    
+
+    create or replace table `datatalksclub-375802`.`bc_production`.`complete_artist_by_country`
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with refs as (
+    select * from `datatalksclub-375802`.`bc_production`.`stg_country_code_ref`
+),
+
+max_totals as (
+    select * from `datatalksclub-375802`.`bc_production`.`artist_max_sales_facts`
+),
+
+max_avg as (
+    select * from `datatalksclub-375802`.`bc_production`.`artist_max_avg_facts`
+)
+
+select
+    refs.cc_ref as ref,
+    refs.country_code,
+    max_totals.artist as highest_selling,
+    max_avg.artist as highest_average,
+from refs
+right join max_totals
+on refs.cc_ref = max_totals.ref
+right join max_avg
+on refs.cc_ref = max_avg.ref
+order by 1
+    );
+  
+[0m17:36:23.664129 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=datatalksclub-375802&j=bq:us-central1:be0ede60-36b0-4e23-951a-426f81af24bc&page=queryresults
+[0m17:36:23.667344 [debug] [Thread-2 (]: Timing info for model.bc_sales.complete_artist_by_country (execute): 17:36:21.430281 => 17:36:23.667005
+[0m17:36:23.668840 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7123d0a-cd71-406c-b650-dab9a677e762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6bed960>]}
+[0m17:36:23.669942 [info ] [Thread-2 (]: 9 of 9 OK created sql table model bc_production.complete_artist_by_country ..... [[32mCREATE TABLE (123.0 rows, 7.4 KiB processed)[0m in 2.25s]
+[0m17:36:23.671256 [debug] [Thread-2 (]: Finished running node model.bc_sales.complete_artist_by_country
+[0m17:36:23.674145 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:36:23.674589 [debug] [MainThread]: Connection 'model.bc_sales.artist_max_sales_facts' was properly closed.
+[0m17:36:23.674931 [debug] [MainThread]: Connection 'model.bc_sales.complete_artist_by_country' was properly closed.
+[0m17:36:23.675273 [debug] [MainThread]: Connection 'model.bc_sales.artist_max_avg_facts' was properly closed.
+[0m17:36:23.675581 [debug] [MainThread]: Connection 'model.bc_sales.country_facts_view' was properly closed.
+[0m17:36:23.676140 [info ] [MainThread]: 
+[0m17:36:23.676820 [info ] [MainThread]: Finished running 3 view models, 6 table models in 0 hours 0 minutes and 11.44 seconds (11.44s).
+[0m17:36:23.679504 [debug] [MainThread]: Command end result
+[0m17:36:23.698786 [info ] [MainThread]: 
+[0m17:36:23.700520 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:36:23.701298 [info ] [MainThread]: 
+[0m17:36:23.702154 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[0m17:36:23.703388 [debug] [MainThread]: Command `dbt build` succeeded at 17:36:23.703208 after 14.06 seconds
+[0m17:36:23.703984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0da04a5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c7239ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0c6bed960>]}
+[0m17:36:23.704561 [debug] [MainThread]: Flushing usage events
