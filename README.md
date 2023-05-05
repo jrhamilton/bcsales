@@ -16,7 +16,7 @@ This project will answer the following questions:
     - Will use a table based off of sales_clustered
 
 
-### Technology
+### Technologies
 * Infrastructure as Code
     - Terraform
 * Workflow Orchestration
@@ -79,24 +79,56 @@ PySpark is used for transforming data.
 #### PySpark used above may have been unnecessary here for this small dataset but used for learning purposes.
 
 ## Reproduce The Project
-1) Create a Google Cloud Instance
-2) Create identity key:
+X) Create identity key:
+In your local machine do the following (OR SKIP THIS AND USE A KEY YOU ALREADY HAVE IF YOU PREFER)
 ```
 $ ssh-keygen
 ```
     - When answering hte questions for location, answer with `~/.ssh/dtc`
-3) Copy the IP Address from your google cloud instance to your `~/.ssh/connfig` like so:
+
+X) In Google Cloud, go to 'META'
+    - May need to search for meta (or ssh keys)
+    - Add your ssh public key (~/.ssh/id.rsa.pub) to the metadata page
+        - IMPORTANT: Make sure the key name you upload ends in '.pub'
+
+X) Create a Google Cloud Instance
+    - Search for instances and go to the VM Instance page.
+    - Click Create An Instance
+    - Select your region and keep note of the region name (ignoring the content inside the paranthesis)
+    - Under machine Series, select: E2
+    - Under machine Type, select: e2-standard-2 (OR e2-medium)
+        - This gives 8 GB memory (or 4 GB)
+    - Under Boot Disk:
+        - Operating System: Ubuntu
+        - Version: 22.04 LTS (x86/64)
+        - Boot Disk Type: SSD Persistent Disk
+        - Size: 30 GB
+        - click 'SELECT'
+    - Under 'Identity and API Access':
+        - Select your service account email best used for GCS and BigQuery operation.
+    - click 'CREATE'
+    - Verify your instance was created.
+    - Copy the external IP Address shown on the next page after the Instance is created.
+        - You may have to click 'View Network Details' in the 3-dot menu to see the IP Address.
+
+X) Copy the IP Address from your google cloud instance to your `~/.ssh/config` like so:
 ```bash
 Host dtc
   Hostname X.X.X.X
-  User app
-  IdentityFile /home/<USERNAME>/.ssh/dtc
+  User <REMOTE-USERNAME>
+  IdentityFile /home/<LAPTOP/COMPUTER USERNAME>/.ssh/dtc
   SetEnv TERM=xterm-256color
 ```
-    - Replace X.X.X.X with the IP Address given for your Remote Google Cloud Instance
+  - Ignore the above if you do not have Linux or Mac.
+  - Replace X.X.X.X with the IP Address given for your Remote Google Cloud Instance
+
 X) SSH into your Google Cloud Instance:
 ```
 $ ssh dtc
+```
+  - OR:
+```
+$ ssh <REMOTE-USERNAME>@X.X.X.X
 ```
 Then in the remote Google Cloud Instance execute the following commands:
 ```bash
