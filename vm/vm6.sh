@@ -14,7 +14,7 @@ export GCS_BUCKET=bandcamp_sales_$gps_project
 
 echo "..."
 echo "GCP_PROJECT and GCS_BUCKET global variables are now set."
-echo "GCP_PROJECT=$GPS_PROJECT"
+echo "GCP_PROJECT=$GCP_PROJECT"
 echo "GCS_BUCKET=$GCS_BUCKET"
 echo "..."
 
@@ -25,7 +25,8 @@ echo "export GCP_REGION=$region" >> $HOME/.bashrc
 export GCP_REGION=$region
 
 echo "..."
-echo "GCP_REGION=$GPS_REGION"
+echo "GCP_REGION=$GCP_REGION"
+
 
 
 echo "locals {
@@ -48,15 +49,42 @@ variable \"storage_class\" {
   default = \"STANDARD\"
 }
 
-variable \"BQ_DATASET\" {
+variable \"BQ_DATASET_STG\" {
   description = \"BigQuery Dataset that raw data (from GCS) will be written to\"
   type = string
   default = \"bandcamp_sales_schema\"
 }
 
+variable \"BQ_DATASET_PROD\" {
+  description = \"BigQuery Dataset that raw data (from GCS) will be written to\"
+  type = string
+  default = \"bc_production\"
+}
+
 variable \"credentials\" {
   description = \"Credentials GOOGLE credentials found in ~/.creds/gcp/gac.json\"
   type = string
-  default = \"$HOME/.creds/gcp/gac.json\"
+  default = \"/home/j/.creds/gcp/gac.json\"
 }" > $HOME/bcsales/terraform/variable.tf
 
+mkdir $HOME/.dbt
+
+echo "bc_sales:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: \"{{ env_var('GCP_PROJECT') }}\"
+      dataset: bandcamp_sales_schema
+      threads: 4
+      # These fields come from the service account json keyfile
+      keyfile: \"{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}\"
+    prod:
+      type: bigquery
+      method: service-account
+      project: \"{{ env_var('GCP_PROJECT') }}\"
+      dataset: bc_production
+      threads: 4
+      # These fields come from the service account json keyfile
+      keyfile: \"{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}\"" > $HOME/.dbt/profiles.yml

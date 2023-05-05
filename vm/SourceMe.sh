@@ -14,5 +14,3 @@ source bcsales/vm/vm5.sh
 source $HOME/.bashrc
 source bcsales/vm/vm6.sh
 source $HOME/.bashrc
-source bcsales/vm/vm7.sh
-source $HOME/.bashrc

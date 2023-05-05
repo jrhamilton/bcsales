@@ -7,7 +7,7 @@ echo "INSTALL essential programs"
 sudo apt-get -y install build-essential python3-pip vim neovim tmux wget unzip
 
 echo "INSTALL pip requirements"
-pip install -r vm/requirements.txt
+pip install -r $HOME/bcsales/vm/requirements.txt
 
 echo "Aliases"
 echo 'alias v=nvim' >> $HOME/.bashrc

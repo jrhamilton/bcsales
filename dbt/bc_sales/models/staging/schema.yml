@@ -13,7 +13,7 @@ sources:
           - name: intId
           - name: _id
           - name: datetime
-          - name: country
+          - name: country_code
           - name: ST
           - name: IT
           - name: item_price
@@ -32,7 +32,7 @@ sources:
           - name: intId
           - name: _id
           - name: datetime
-          - name: country
+          - name: country_code
           - name: ST
           - name: IT
           - name: item_price

@@ -15,3 +15,5 @@ export PATH=${HOME}/bin:${PATH}
 
 echo "Execute: source ~/.bashrc"
 echo "Execute: docker-compose version"
+
+cd $HOME

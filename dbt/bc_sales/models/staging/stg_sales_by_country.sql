@@ -7,6 +7,6 @@ select
   cast(amount_paid_usd as numeric) as amount_paid_usd,
 
   cast(country_code as string) as country_code,
-  cast(country as string) as country
+  --cast(country as string) as country --TODO
 
 from {{ source('staging','sales_partitioned') }}
