@@ -15,6 +15,8 @@ This project will answer the following questions:
 * Which artist receives the highest USD in average POS by country.
     - Will use a table based off of sales_clustered
 
+<img width="780px" src="images/country_facts-earth.png" alt="Transactions by Country"/>
+<img width="780px" src="images/country_transactions_bar_graph.png" alt="Bar Graph Transactions by Country"
 
 ### Technologies
 * Infrastructure as Code
@@ -41,14 +43,12 @@ This project will answer the following questions:
 	    * A long reference the Artist name and extra identification.
 	      - This column was split and the number format at the beginning was copied and used as the 'intId'.
           - name: datetime
-          - name: country
+          - name: country_code
           - name: ST
           - name: IT
           - name: item_price
           - name: amount_paid_usd
             * Amount paid by the customer
-          - name: currency
-          - name: AOF
           - name: art_id
           - name: releases
           - name: artist_name
@@ -132,24 +132,52 @@ $ ssh <REMOTE-USERNAME>@X.X.X.X
 ```
 Then in the remote Google Cloud Instance execute the following commands:
 ```bash
-$ git clone https://github.com/jrhamilton/bcsales`
+$ git clone https://github.com/jrhamilton/bcsales
 $ bash bcsales/vm/SourceMe.sh
 ```
-Follow the instructions. This will walk you through the building of your system.
+
+X) Add your REMOTE INSTANCE key to Google Cloud that was made during the interactive prompts.
+    - Just like you did with your local key earlier (If you followed that process)
+    - In Google Cloud Console, search for 'metadata' or 'ssh keys'.
+    - Add the key from your remote instance to the ssh key page.
+    - `cat ~/.ssh/id_ed25519.pub`
+    - Add the contents from the `cat` to the ssh key page.
+
+X) Now add your GOOGLE_APPLICATION_CREDENTIALS to your REMOTE machine.
+    - Add the credentials to `$HOME/.creds/gcp/gac.json`
+    - I like to use scp. From your local machine execute the following:
+    `$ scp ~/<CREDENTIALS_LOCATION> gcp:~/.creds/gcp/gac.json`
+    - For example, mine would be:
+    `$ scp ~/.google_application_credentials.json gcp:~/.creds/gcp/gac.json`
+
+### We are done with Virtual Machine setup.
+
+
+### REBOOT
+From here, it is best just to reboot the instance and log back in to avoid any Environment issues.
+`$ sudo reboot`
+
+- Log back in:
+`$ ssh dtc`
 
 
 ### Start Tmux
 ```
 $ cd ~/bcsales
-$ tmux a -t bc
+$ tmux new -t bc
 ```
 This will start a Tmux session
 type `CTRL-B c`
+  - That is the key (CTRL) and the key (b) pressed at the same time, let go, then press the key (c)
   - This will put you in another window.
 Now type `CTRL-B 0`
   - This will take you back to previous window.
+  - At any time you can hit the Esc button to 'reset' if you think you messed up the key-combination.
 Now type `CTRL-B 1` to go back the newer window.
 `$ prefect orion start`
+    - If you get an error: 'prefect not found': open another window:
+        - `CTRL-B c`
+        - Then run the command again: `$ prefect orion start`
 Now type `CTRL-B %`
   - This will create a new pane in same window.
   - This will be for your Prefect Agent.
@@ -167,6 +195,10 @@ $ terraform plan
 $ terraform apply
 ```
   - Reply 'yes'
+
+Get into a new Tmux window:
+`CTRL-B c`
+
 ```
 $ cd ~/bcsales
 $ bash run_program.sh
@@ -174,6 +206,12 @@ $ bash run_program.sh
 When program is done building, execute the folowing commands:
 ```
 $ cd ~/bcsales/dbt/bcsales
+$ dbt deps
 $ dbt build
 $ dbt build -t prod
 ```
+
+You can biuld from Looker Studio
+LINKS:
+Highest selling artist by country:
+https://lookerstudio.google.com/s/t49FPHiCa6E
