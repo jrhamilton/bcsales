@@ -92,7 +92,7 @@ def transform_data(bcS_df):
             .withColumn('IT', F.lit('item_type')) \
             .withColumn('AOF', F.lit('amount_over_format')) \
             .select('intId', '_id', 'datetime', 'country_code',
-                    ''ST', 'IT', 'item_price',
+                    'ST', 'IT', 'item_price',
                     'amount_paid_usd','currency', 'AOF',
                     'art_id', 'releases', 'artist_name', 'album_title')
 
